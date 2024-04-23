@@ -1,4 +1,4 @@
-<h1>Porjeto Trending Youtube Video Stats</h1>
+<h1>Projeto Trending Youtube Video Stats</h1>
 <p>O projeto trending youtube video stats contem uma lista de dados do top trending videos da plataforma youtube. Nosso objetivo é estudar o desempenho dos algoritmos de ordenação.</p>
 <p>Para isso, é utilizado os algoritmos de ordenação: selection sort, insertion sort, merge sort, quick sort, quick sort mediana de 3, counting sort e heap sorte, ordenando os registros de acordo com os parâmetros:</p>
 <ul>
