@@ -22,13 +22,18 @@ public record Video(
 
 
     static Video fromCSV(String csvLine) {
-        String[] parts = csvLine.split(",");
+        // regex fonte: https://www.baeldung.com/java-split-string-commas
+        String[] parts = csvLine.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1); // regex para detectar virgulas dentro de aspas
+
         for (int i = 0; i < parts.length; i++) {
             parts[i] = parts[i].trim();
         }
         // GB,"zwrlJwed2mQ",17.24.12,"BigCityBeats WORLD CLUB DOME Zero Gravity (Official Trailer)","BigCityBeats",24,2017-12-13T13:58:13.000Z,
 
-
+        var description = "";
+        if (parts.length > 17){  // se passar de 17, quer dizer que a descrição existe👍
+            description = parts[17];
+        }
 
         return new Video(
                 parts[0],
@@ -48,7 +53,7 @@ public record Video(
                 toBoolean(parts[14]),
                 toBoolean(parts[15]),
                 toBoolean(parts[16]),
-                parts[17]
+                description
         );
     }
 

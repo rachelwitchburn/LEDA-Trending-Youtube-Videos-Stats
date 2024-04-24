@@ -8,9 +8,9 @@ public class Utils {
             var lines = new DynamicArray<String>();
 
             var scanner = new Scanner(file);
-            scanner.useDelimiter("\r\n");
+            scanner.useDelimiter("\n");
             while (scanner.hasNext()) {
-                String line = scanner.next();
+                String line = scanner.nextLine();
                 lines.add(line);
             }
 

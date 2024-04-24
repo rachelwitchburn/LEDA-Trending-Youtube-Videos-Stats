@@ -6,7 +6,7 @@ public class Task1 {
 
         var allFiles = new DynamicArray<DynamicArray<String>>();
         for (String video : countries) {
-            var lines = Utils.readCSV(path + video + "videos.csv");
+            var lines = Utils.readCSV(path + video + "videos_cleaned.csv");
             allFiles.add(lines);
         }
 

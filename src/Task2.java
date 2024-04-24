@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class Task2 {
     public static void main(String[] args) {
         var filePath = "output/videos.csv";
@@ -8,20 +6,17 @@ public class Task2 {
 
         // processar
         var processedData = new DynamicArray<String>();
-        for (int i =0; i < data.length; i++) {
+        for (int i = 0; i < data.length; i++) {
             if (i == 0) {
-                processedData.add(data[i]); // adciona o cabeçalho ao arquivo
+                processedData.add(data[i].replace("trending_date", "trending_date,trending_full_date"));// adciona o cabeçalho ao arquivo
             } else {
-             //"GB,\"zwrlJwed2mQ\",17.24.12,\"BigCityBeats WORLD CLUB DOME Zero Gravity (Official Trailer)\",\"BigCityBeats\",24,2017-12-13T13:58:13.000Z,";
+                //"GB,\"zwrlJwed2mQ\",17.24.12,\"BigCityBeats WORLD CLUB DOME Zero Gravity (Official Trailer)\",\"BigCityBeats\",24,2017-12-13T13:58:13.000Z,";
 
                 // formatar a data no novo arquivo
                 var parts = data[i].split(",");
-                var dateParts = parts[2].split("\\.");
-                if(dateParts.length<2){
-                    System.out.println("Not ok");
-                }
                 var trendingFullDate = dateConverter(parts[2]);
-                StringBuilder newLine = new StringBuilder(parts[0] + "," + parts[1] + "," + trendingFullDate);
+                var joinedDate = parts[2] + "," + trendingFullDate;
+                StringBuilder newLine = new StringBuilder(parts[0] + "," + parts[1] + "," + joinedDate);
                 for (int j = 3; j < parts.length; j++) {
                     newLine.append(",").append(parts[j]);
                 }
@@ -40,14 +35,15 @@ public class Task2 {
     }
 
     /**
-     *  recebe a data no formato aa.mm.dd e retorna no formato dd/mm/aaaa
+     * recebe a data no formato aa.mm.dd e retorna no formato dd/mm/aaaa
+     *
      * @param date
      * @return String
      */
     static String dateConverter(String date) {
 
         var dateParts = date.split("\\.");
-        if(dateParts.length<2){
+        if (dateParts.length < 2) {
             System.out.println("Not ok");
         }
         var trendingFullDate = dateParts[1] + "/" + dateParts[2] + "/";
