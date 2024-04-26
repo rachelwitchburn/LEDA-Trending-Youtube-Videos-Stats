@@ -1,6 +1,6 @@
 public class Task1 {
     public static void main(String[] args) {
-        var path = "C:\\Users\\raque\\OneDrive\\Área de Trabalho\\faculdade\\leda\\ytbe stats csv extraido\\";
+        var path = "assets/";
         var countries = new String[]{"CA", "DE", "US", "FR", "GB", "IN", "JP", "KR", "MX", "RU"};
         var totalCountries = countries.length; // = 10
 

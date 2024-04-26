@@ -15,5 +15,9 @@
   <li>Faça a instalação da IDE em seu computador.</li>
   <li>Baixa em seu computador os arquivos do repositório</li>
   <li>Abra os arquivos baixados importando-os de sua máquina</li>
+    <li>Insira os arquivos csv na página assets</li>
+    <li>Execute o arquivo app.py para limpar o dataset</li>
+
 </ul>
-![image](https://github.com/rachelwitchburn/LEDA-Trending-Youtube-Videos-Stats/assets/131322647/25ed46f0-3fa4-4750-92a7-ac5a4c8144af)
+<hr>
+

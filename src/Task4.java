@@ -3,7 +3,7 @@ public class Task4 {
         // abrir o arquivo
         var filePath = "output/videos_T1.csv";
         var data = Utils.readCSV(filePath).toArray(new String[0]);
-        
+
         // processar dados
         var processedData = new DynamicArray<String>();
 
