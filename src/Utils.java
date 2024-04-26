@@ -1,3 +1,5 @@
+import models.Video;
+
 import java.io.*;
 import java.util.Scanner;
 

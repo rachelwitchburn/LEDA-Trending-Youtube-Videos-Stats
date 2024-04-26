@@ -1,3 +1,5 @@
+import models.Video;
+
 public class Task3 {
     public static void main(String[] args) {
         // abrir arquivo
@@ -14,7 +16,7 @@ public class Task3 {
                 processedData.add(line);
             } else {
                 var video = Video.fromCSV(line);
-                var category = video.categoryId();
+                var category = video.getCategoryId();
                 if (category.equals("42") || category.equals("43") || category.equals("44")) {
                     processedData.add(line);
                 }

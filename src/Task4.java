@@ -1,3 +1,5 @@
+import models.Video;
+
 public class Task4 {
     public static void main(String[] args) {
         // abrir o arquivo
@@ -13,7 +15,7 @@ public class Task4 {
                 processedData.add(line);
             } else {
                 var video = Video.fromCSV(line);
-                if (video.likes() < video.dislikes()) {
+                if (video.getLikes() < video.getDislikes()) {
                     processedData.add(line);
                 }
             }
